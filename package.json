@@ -1,0 +1,55 @@
+{
+  "name": "vuedoc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --open",
+    "build": "vue-cli-service build --modern",
+    "build:ci": "yarn build --report-json",
+    "lint:eslint": "eslint --fix",
+    "lint:markdownlint": "markdownlint",
+    "lint:prettier": "prettier --write --loglevel warn",
+    "lint:all:eslint": "yarn lint:eslint --ext .js,.vue .",
+    "lint:all:markdownlint": "yarn lint:markdownlint \"docs/*.md\" \"*.md\"",
+    "lint:all:prettier": "yarn lint:prettier \"**/*.{js,json,css,scss,vue,html,md}\"",
+    "lint": "run-s lint:all:*",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "gitHooks": {
+    "pre-commit": "cross-env PRE_COMMIT=true lint-staged"
+  },
+  "dependencies": {
+    "core-js": "2.6.8",
+    "register-service-worker": "1.6.x",
+    "vue": "2.6.10",
+    "vue-router": "3.0.7",
+    "vuex": "3.1.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "3.9.x",
+    "@vue/cli-plugin-eslint": "^3.9.x",
+    "@vue/cli-plugin-pwa": "3.9.x",
+    "@vue/cli-service": "3.9.x",
+    "@vue/eslint-config-prettier": "4.0.x",
+    "@vue/eslint-config-standard": "4.0.x",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.0.x",
+    "cross-env": "5.2.x",
+    "eslint": "5.16.x",
+    "eslint-plugin-vue": "vuejs/eslint-plugin-vue#edd5f14",
+    "imagemin-lint-staged": "0.4.x",
+    "lint-staged": "9.1.x",
+    "markdownlint-cli": "0.17.x",
+    "node-sass": "4.12.x",
+    "npm-run-all": "4.1.x",
+    "prettier": "1.18.x",
+    "sass-loader": "7.1.x",
+    "vue-template-compiler": "2.6.10",
+    "vuepress": "^1.0.0-rc.1"
+  },
+  "engines": {
+    "node": ">=10.13.3",
+    "yarn": ">=1.0.0"
+  }
+}
