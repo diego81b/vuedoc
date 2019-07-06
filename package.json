@@ -13,8 +13,9 @@
     "lint:all:markdownlint": "yarn lint:markdownlint \"docs/*.md\" \"*.md\"",
     "lint:all:prettier": "yarn lint:prettier \"**/*.{js,json,css,scss,vue,html,md}\"",
     "lint": "run-s lint:all:*",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "vuepress dev docs --open",
+    "docs:build": "vuepress build docs",
+    "docs:serve": "vuepress serve docs --build --open"
   },
   "gitHooks": {
     "pre-commit": "cross-env PRE_COMMIT=true lint-staged"
@@ -24,6 +25,8 @@
     "register-service-worker": "1.6.x",
     "vue": "2.6.10",
     "vue-router": "3.0.7",
+    "vuepress-plugin-nprogress": "^1.1.1",
+    "vuepress-plugin-serve": "^1.1.0",
     "vuex": "3.1.1"
   },
   "devDependencies": {
