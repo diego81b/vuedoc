@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/diego81b/vuedoc.svg?branch=master)](https://travis-ci.com/diego81b/vuedoc)
+
 # vuedoc
 
 ## Project setup
