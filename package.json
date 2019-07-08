@@ -15,7 +15,9 @@
     "lint": "run-s lint:all:*",
     "docs:dev": "vuepress dev docs --open",
     "docs:build": "vuepress build docs",
-    "docs:serve": "vuepress serve docs --build --open"
+    "docs:build:gitlab": "cross-env DEPLOY_ENV=gitlab vuepress build docs",
+    "docs:serve": "vuepress serve docs --build --open",
+    "docs:serve:gitlab": "cross-env DEPLOY_ENV=gitlab vuepress serve docs --build --open"
   },
   "gitHooks": {
     "pre-commit": "cross-env PRE_COMMIT=true lint-staged"
