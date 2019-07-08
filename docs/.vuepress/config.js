@@ -2,7 +2,7 @@ module.exports = {
   title: 'Hello VuePress',
   description: 'Just playing around',
   base: '/vuedoc/',
-  dest: process.env.DEPLOY_ENV === 'gitlab' ? 'public' : 'docs/.vuepress/dist',
+  dest: process.env.DEPLOY_ENV === 'gitlab' ? './public' : 'docs/.vuepress/dist',
   plugins: [
     'vuepress-plugin-nprogress',
     ['serve', {
